@@ -12,6 +12,7 @@
 		13D62A8122BC8E21008AA251 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13D62A7F22BC8E21008AA251 /* Main.storyboard */; };
 		13D62A8322BC8E23008AA251 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13D62A8222BC8E23008AA251 /* Assets.xcassets */; };
 		13D62A8622BC8E23008AA251 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13D62A8422BC8E23008AA251 /* LaunchScreen.storyboard */; };
+		13D62A8F22BCAE85008AA251 /* SceneKit Asset Catalog.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 13D62A8E22BCAE85008AA251 /* SceneKit Asset Catalog.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		13D62A8222BC8E23008AA251 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13D62A8522BC8E23008AA251 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13D62A8722BC8E23008AA251 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13D62A8E22BCAE85008AA251 /* SceneKit Asset Catalog.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = "SceneKit Asset Catalog.scnassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				13D62A7D22BC8E21008AA251 /* ViewController.swift */,
 				13D62A7F22BC8E21008AA251 /* Main.storyboard */,
 				13D62A8222BC8E23008AA251 /* Assets.xcassets */,
+				13D62A8E22BCAE85008AA251 /* SceneKit Asset Catalog.scnassets */,
 				13D62A8422BC8E23008AA251 /* LaunchScreen.storyboard */,
 				13D62A8722BC8E23008AA251 /* Info.plist */,
 			);
@@ -122,6 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13D62A8F22BCAE85008AA251 /* SceneKit Asset Catalog.scnassets in Resources */,
 				13D62A8622BC8E23008AA251 /* LaunchScreen.storyboard in Resources */,
 				13D62A8322BC8E23008AA251 /* Assets.xcassets in Resources */,
 				13D62A8122BC8E21008AA251 /* Main.storyboard in Resources */,
