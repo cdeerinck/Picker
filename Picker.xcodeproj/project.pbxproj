@@ -7,15 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1394A56A22BDD31F00D420D9 /* imageWithText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394A56922BDD31F00D420D9 /* imageWithText.swift */; };
+		1394A56C22BDD40500D420D9 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394A56B22BDD40500D420D9 /* Globals.swift */; };
+		1394A56E22BDFFC800D420D9 /* makeTiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394A56D22BDFFC800D420D9 /* makeTiles.swift */; };
+		1394A57022BDFFF100D420D9 /* makeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394A56F22BDFFF100D420D9 /* makeColors.swift */; };
+		1394A57222BE002300D420D9 /* placeTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394A57122BE002300D420D9 /* placeTile.swift */; };
+		1394A57422BE021700D420D9 /* makeBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394A57322BE021700D420D9 /* makeBoard.swift */; };
+		1394A57622BE12A300D420D9 /* vectorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394A57522BE12A300D420D9 /* vectorExtensions.swift */; };
+		1394A57822BEDB2100D420D9 /* zoomCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394A57722BEDB2100D420D9 /* zoomCamera.swift */; };
 		13D62A7C22BC8E21008AA251 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D62A7B22BC8E21008AA251 /* AppDelegate.swift */; };
 		13D62A7E22BC8E21008AA251 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D62A7D22BC8E21008AA251 /* ViewController.swift */; };
 		13D62A8122BC8E21008AA251 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13D62A7F22BC8E21008AA251 /* Main.storyboard */; };
 		13D62A8322BC8E23008AA251 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13D62A8222BC8E23008AA251 /* Assets.xcassets */; };
 		13D62A8622BC8E23008AA251 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13D62A8422BC8E23008AA251 /* LaunchScreen.storyboard */; };
-		13D62A8F22BCAE85008AA251 /* SceneKit Asset Catalog.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 13D62A8E22BCAE85008AA251 /* SceneKit Asset Catalog.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1394A56922BDD31F00D420D9 /* imageWithText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageWithText.swift; sourceTree = "<group>"; };
+		1394A56B22BDD40500D420D9 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		1394A56D22BDFFC800D420D9 /* makeTiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeTiles.swift; sourceTree = "<group>"; };
+		1394A56F22BDFFF100D420D9 /* makeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeColors.swift; sourceTree = "<group>"; };
+		1394A57122BE002300D420D9 /* placeTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = placeTile.swift; sourceTree = "<group>"; };
+		1394A57322BE021700D420D9 /* makeBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeBoard.swift; sourceTree = "<group>"; };
+		1394A57522BE12A300D420D9 /* vectorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vectorExtensions.swift; sourceTree = "<group>"; };
+		1394A57722BEDB2100D420D9 /* zoomCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zoomCamera.swift; sourceTree = "<group>"; };
 		13D62A7822BC8E21008AA251 /* Picker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13D62A7B22BC8E21008AA251 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13D62A7D22BC8E21008AA251 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +38,6 @@
 		13D62A8222BC8E23008AA251 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13D62A8522BC8E23008AA251 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13D62A8722BC8E23008AA251 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		13D62A8E22BCAE85008AA251 /* SceneKit Asset Catalog.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = "SceneKit Asset Catalog.scnassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,11 +70,18 @@
 		13D62A7A22BC8E21008AA251 /* Picker */ = {
 			isa = PBXGroup;
 			children = (
+				1394A56B22BDD40500D420D9 /* Globals.swift */,
+				1394A56F22BDFFF100D420D9 /* makeColors.swift */,
+				1394A56D22BDFFC800D420D9 /* makeTiles.swift */,
+				1394A57122BE002300D420D9 /* placeTile.swift */,
+				1394A57722BEDB2100D420D9 /* zoomCamera.swift */,
+				1394A57322BE021700D420D9 /* makeBoard.swift */,
 				13D62A7B22BC8E21008AA251 /* AppDelegate.swift */,
+				1394A56922BDD31F00D420D9 /* imageWithText.swift */,
 				13D62A7D22BC8E21008AA251 /* ViewController.swift */,
-				13D62A7F22BC8E21008AA251 /* Main.storyboard */,
+				1394A57522BE12A300D420D9 /* vectorExtensions.swift */,
 				13D62A8222BC8E23008AA251 /* Assets.xcassets */,
-				13D62A8E22BCAE85008AA251 /* SceneKit Asset Catalog.scnassets */,
+				13D62A7F22BC8E21008AA251 /* Main.storyboard */,
 				13D62A8422BC8E23008AA251 /* LaunchScreen.storyboard */,
 				13D62A8722BC8E23008AA251 /* Info.plist */,
 			);
@@ -125,7 +146,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13D62A8F22BCAE85008AA251 /* SceneKit Asset Catalog.scnassets in Resources */,
 				13D62A8622BC8E23008AA251 /* LaunchScreen.storyboard in Resources */,
 				13D62A8322BC8E23008AA251 /* Assets.xcassets in Resources */,
 				13D62A8122BC8E21008AA251 /* Main.storyboard in Resources */,
@@ -139,7 +159,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1394A57422BE021700D420D9 /* makeBoard.swift in Sources */,
+				1394A57822BEDB2100D420D9 /* zoomCamera.swift in Sources */,
+				1394A56C22BDD40500D420D9 /* Globals.swift in Sources */,
+				1394A57022BDFFF100D420D9 /* makeColors.swift in Sources */,
+				1394A57622BE12A300D420D9 /* vectorExtensions.swift in Sources */,
 				13D62A7E22BC8E21008AA251 /* ViewController.swift in Sources */,
+				1394A56A22BDD31F00D420D9 /* imageWithText.swift in Sources */,
+				1394A56E22BDFFC800D420D9 /* makeTiles.swift in Sources */,
+				1394A57222BE002300D420D9 /* placeTile.swift in Sources */,
 				13D62A7C22BC8E21008AA251 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
