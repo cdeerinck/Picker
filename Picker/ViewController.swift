@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var nameList: UITextField!
     @IBOutlet weak var theScene: SCNView!
+    @IBOutlet weak var winnerList: UILabel!
 
     var nameArray:[String] = []
 
@@ -27,6 +28,10 @@ class ViewController: UIViewController {
     }
 
     //Remember names = nameArray.joined(separator: " ")
+
+    func updateNames(names:String) {
+        nameList.text = names
+    }
 
     func setupScene(with names:[String]) {
         let rootNode = SCNNode()
@@ -81,5 +86,9 @@ extension ViewController: UITextFieldDelegate {
 extension ViewController: SCNSceneRendererDelegate {
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         zoomCamera(sceneView: theScene, bounds: sceneViewBounds, cameraNode: cameraNode, playerList: players) //zoom on all of them
+        eliminateUsers(players: &players, winnerList:nameList)
+        if winners != "" {
+            DispatchQueue.main.async { self.updateNames(names: winners) } //Forces the call to run on the main thread
+        }
     }
 }

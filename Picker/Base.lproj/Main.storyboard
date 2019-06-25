@@ -27,11 +27,20 @@
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIN-h9-I0R">
                                 <rect key="frame" x="20" y="70" width="374" height="792"/>
                             </sceneKitView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sf5-SW-xfh">
+                                <rect key="frame" x="20" y="70" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Sf5-SW-xfh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ap8-jp-Imi"/>
+                            <constraint firstItem="Sf5-SW-xfh" firstAttribute="top" secondItem="Dhi-qd-oku" secondAttribute="bottom" constant="8" id="JfE-hW-rDO"/>
                             <constraint firstItem="Dhi-qd-oku" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Njg-as-CMG"/>
                             <constraint firstItem="kIN-h9-I0R" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QAG-Lj-v1o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sf5-SW-xfh" secondAttribute="trailing" constant="20" id="R0t-YQ-cda"/>
                             <constraint firstItem="kIN-h9-I0R" firstAttribute="top" secondItem="Dhi-qd-oku" secondAttribute="bottom" constant="8" symbolic="YES" id="UXf-Au-Ch1"/>
                             <constraint firstItem="kIN-h9-I0R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="j7B-gQ-zbk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dhi-qd-oku" secondAttribute="trailing" constant="20" id="s73-Zo-2gp"/>
@@ -43,6 +52,7 @@
                     <connections>
                         <outlet property="nameList" destination="Dhi-qd-oku" id="BKc-6X-wM1"/>
                         <outlet property="theScene" destination="kIN-h9-I0R" id="fPG-Vk-Yn6"/>
+                        <outlet property="winnerList" destination="Sf5-SW-xfh" id="5SN-FD-Jx1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

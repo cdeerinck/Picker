@@ -36,6 +36,7 @@ let xSpacing:Float = 1.75
 let ySpacing:Float = 1.55
 
 var players:[SCNNode] = []
+var winners:String = ""
 
 let pi = Float.pi
 let halfPi = pi / 2
@@ -44,3 +45,5 @@ let twoPi = pi * 2
 var sceneViewBounds: CGRect = CGRect()
 
 var lookAtSpot = SCNVector3Make(0,0,0)
+let maxFOV:CGFloat = 60.0
+let minFOV:CGFloat = 5.0

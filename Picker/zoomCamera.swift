@@ -20,18 +20,10 @@ func zoomCamera (sceneView: SCNView, bounds sceneViewBounds: CGRect, cameraNode:
 
     let midPack = playerList.reduce(0, { a, b in a + b.presentation.position.x } ) / Float(playerList.count)
     let leaders = playerList.filter { $0.presentation.position.x <= midPack + 2 }
+
     //print(leaders.count, separator:" ", terminator:" ")
     for player in leaders {
-        print("\(String(describing: player.name)) is at \(player.presentation.position) moving at \(player.physicsBody?.velocity)")
-        if player.presentation.position.y > 40.0 {
-            print("Error -->", player.presentation.position, player.physicsBody?.velocity)
-            //If you run the program, and enter "A B C D E F G H I J K L M N" then press return
-            //The sames happens for O P
-            //During the 3rd frame of the render, this statement will trigger, showing the velocity of this item going crazy.
-            //I can find no reason for this in my code.
-            if player.physicsBody!.velocity.y > Float(0) { player.physicsBody?.velocity.y = -10.0 }
-            player.physicsBody?.velocity.x = 0.0
-            player.physicsBody?.velocity.z = 0.0 }
+        //print("\(String(describing: player.name)) is at \(player.presentation.position) moving at \(player.physicsBody?.velocity)")
         centroid += player.presentation.position
         //print(centroid)
         let playerCoordsOnScreen = sceneView.projectPoint(player.presentation.position)
@@ -44,29 +36,16 @@ func zoomCamera (sceneView: SCNView, bounds sceneViewBounds: CGRect, cameraNode:
 //        }
     }
     centroid /= Float(leaders.count)
-    for player in players {
-        if player.presentation.position.y < 0 {
-            players.removeAll() { $0.name == player.name }
-            if players.count == 1 {
-                for player in players {
-                    player.physicsBody?.velocity.x = 0
-                    player.physicsBody?.velocity.y = 0
-                    player.physicsBody?.velocity.z = 0
-                    player.physicsBody?.isAffectedByGravity = false
-                }
-            }
-        }
-    }
     let zoomOutBounds = sceneViewBounds.insetBy(dx: sceneViewBounds.width * 0.1, dy: sceneViewBounds.height * 0.1 )
     if !(zoomOutBounds.contains(CGPoint(x: minX,y: minY)) && zoomOutBounds.contains(CGPoint(x: maxX,y: maxY))) { // We need to zoom out some
-        if cameraNode.camera!.fieldOfView < CGFloat(60.0) {
+        if cameraNode.camera!.fieldOfView < maxFOV {
             cameraNode.camera?.fieldOfView += 0.2
             //print(" Out")
         }
     } else {
         let zoomInBounds = sceneViewBounds.insetBy(dx: sceneViewBounds.width * 0.3, dy: sceneViewBounds.height * 0.3 )
         if (zoomInBounds.contains(CGPoint(x: minX,y: minY)) && zoomInBounds.contains(CGPoint(x: maxX,y: maxY))) { // We need to zoom in some
-            if cameraNode.camera!.fieldOfView > CGFloat(5.0) {
+            if cameraNode.camera!.fieldOfView > minFOV {
                 cameraNode.camera?.fieldOfView -= 0.2
         //print(" In")
             }
@@ -82,6 +61,6 @@ func zoomCamera (sceneView: SCNView, bounds sceneViewBounds: CGRect, cameraNode:
     tempNode.position = lookAtSpot
     let constraint = SCNLookAtConstraint(target: tempNode)
     cameraNode.constraints = [constraint]
-    print(cameraNode.camera!.fieldOfView, centroid, lookAtSpot)
-    print("")
+    //print(cameraNode.camera!.fieldOfView, centroid, lookAtSpot)
+    //print("")
 }

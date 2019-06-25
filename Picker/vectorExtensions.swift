@@ -250,3 +250,10 @@ func elevationAngleBetweenVectors(_ left:SCNVector3, _ right:SCNVector3) -> SCNF
     let flatRight = SCNVector3Make(0, right.y, right.z)
     return angleBetweenVectors(flatLeft, flatRight)
 }
+
+/**
+ * Calculates the SCNVector from lerping between two SCNVector4 vectors
+ */
+func SCNVector4Lerp(vectorStart: SCNVector4, vectorEnd: SCNVector4, t: Float) -> SCNVector4 {
+    return SCNVector4Make(vectorStart.x + ((vectorEnd.x - vectorStart.x) * t), vectorStart.y + ((vectorEnd.y - vectorStart.y) * t), vectorStart.z + ((vectorEnd.z - vectorStart.z) * t), vectorStart.w + ((vectorEnd.w - vectorStart.w) * t))
+}

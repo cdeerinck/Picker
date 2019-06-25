@@ -13,9 +13,9 @@ func makeBoard() {
         for y in 0...49 {
             var kind:tiles
             if y == 0 || y==49 {
-                kind = .red
-            } else if y == 1 || y==48 {
                 kind = .green
+            } else if y == 1 || y==48 {
+                kind = .red
             } else {
                 let r = Int.random(in: 0...100)
                 switch r {

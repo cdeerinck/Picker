@@ -16,10 +16,10 @@ func placeTile(_ x:Int, _ y:Int, _ kind:tiles) {
     elevation += Float(abs(25-y)) / 5
     var newTile:SCNNode
     switch kind {
-    case .green:
-        newTile = greenTileNode.clone()
     case .red:
         newTile = redTileNode.clone()
+    case .green:
+        newTile = greenTileNode.clone()
         elevation += 0.6
     case .black:
         newTile = blackTileNode.clone()
