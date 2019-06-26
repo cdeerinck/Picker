@@ -74,19 +74,26 @@ extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         textField.text = textField.text?.replacingOccurrences(of: ",", with: " ")
+        textField.text = textField.text?.replacingOccurrences(of: "  ", with: " ")
         nameArray = textField.text?.components(separatedBy: " ") ?? []
+        nameArray.shuffle()
         scene = SCNScene()
         theScene.scene = scene
         setupScene(with:nameArray)
+        winners = textField.text ?? ""
         print("Starting")
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        winners = "" // Do this so the SceneKit delegate will stop updating the field
     }
 }
 
 extension ViewController: SCNSceneRendererDelegate {
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
         zoomCamera(sceneView: theScene, bounds: sceneViewBounds, cameraNode: cameraNode, playerList: players) //zoom on all of them
-        eliminateUsers(players: &players, winnerList:nameList)
+        eliminateUsers(players: &players)
         if winners != "" {
             DispatchQueue.main.async { self.updateNames(names: winners) } //Forces the call to run on the main thread
         }

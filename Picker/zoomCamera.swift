@@ -46,7 +46,7 @@ func zoomCamera (sceneView: SCNView, bounds sceneViewBounds: CGRect, cameraNode:
         let zoomInBounds = sceneViewBounds.insetBy(dx: sceneViewBounds.width * 0.3, dy: sceneViewBounds.height * 0.3 )
         if (zoomInBounds.contains(CGPoint(x: minX,y: minY)) && zoomInBounds.contains(CGPoint(x: maxX,y: maxY))) { // We need to zoom in some
             if cameraNode.camera!.fieldOfView > minFOV {
-                cameraNode.camera?.fieldOfView -= 0.2
+                cameraNode.camera?.fieldOfView -= 0.4
         //print(" In")
             }
         }
