@@ -42,7 +42,7 @@ class ViewController: UIViewController {
             let iteration = rootNode.childNodes.count + 1
             //let offset = (names.count / 2) - iteration
             let playerNode = SCNNode(geometry: SCNSphere(radius: 0.6))
-            let label = imageWithText(text: name, fontSize: 24, fontColor: sDarkColor[iteration%8], imageSize: CGSize(width: 200,height: 100), backgroundColor: sLightColor[iteration%8])
+            let label = imageWithText(text: name, fontSize: 24, fontColor: .black/* sDarkColor[iteration%8]*/, imageSize: CGSize(width: 200,height: 100), backgroundColor: sLightColor[iteration%8])
             playerNode.geometry?.firstMaterial?.diffuse.contents = label
             playerNode.position = SCNVector3(xSpacing * 48, slope * 50.0 + 5.0, (Float(iteration)+iterationOffset) * playerSpacing)
             playerNode.physicsBody = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(geometry: playerNode.geometry!, options: nil))

@@ -43,7 +43,7 @@ func eliminateUsers (players: inout [SCNNode]) {
         //player.presentation.rotation = SCNVector4Lerp(vectorStart: player.presentation.rotation, vectorEnd: SCNVector4Make(1.0,1.0,1.0,1.0), t: 0.01)
         player.physicsBody?.angularVelocity.x = 0.1
         player.physicsBody?.angularVelocity.y = 0.2
-        player.physicsBody?.angularVelocity.z = 1
+        player.physicsBody?.angularVelocity.z = -1
         player.physicsBody?.angularVelocity.w = 5
     }
 }
